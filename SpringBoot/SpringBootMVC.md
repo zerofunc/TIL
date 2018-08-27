@@ -17,3 +17,10 @@ HTTP 요청 본문을 객체로 변경하거나
 # RestController
 RestController 어노테이션을 컨트롤러에 사용하면 
 Controller Method에 @ResponseBody를 생략해도 됨.
+
+# HttpMessageConvertersAutoConfiguration
+HttpMessageConverters에 대한 자동 설정을 해줌.
+
+JacksonHttpMessageConvertersConfiguration 에서 Json을 xml로 convert 해주는 설정이 있음. 
+
+XmlMapper가 클래스 패스에 있어야만 해당 설정이 동작하기에 XML 메시지 컨버터를 추가해줘야함.
