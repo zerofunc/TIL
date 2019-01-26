@@ -19,7 +19,7 @@ public class item30 {
         Map<Integer, CapitalCity> capitalCityMap = capitalCities.stream()
                 .collect(Collectors.toMap(CapitalCity::getCountryId, Function.identity()));
 
-        countrys.stream()
+        List<CountryCapital> countryCapitals = countrys.stream()
                 .filter(c -> capitalCityMap.containsKey(c.getId()))
                 .map(c -> {
                     CapitalCity capitalCity = capitalCityMap.get(c.getId());
