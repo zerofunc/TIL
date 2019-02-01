@@ -140,4 +140,19 @@ eureka:
                 eviction-interval-timer-in-ms: 3000
             ```
 ## 인스턴스 식별자 변경하기
-            
+- 유레카에 등록된 인스턴스는 이름으로 묶임
+- 서버가 인식할 수 있는 유일한 ID를 보내야함
+- 서비스 그룹의 **status** 열에 instanceId가 표시됨
+- 스프링 클라우드 유레카의 식별자 자동 생성 방식
+   ```groovy
+    ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}.
+    ```
+- `eureka.instance.instance-id` 속성을 이용해 재정의 가능
+    ```yaml
+    server:
+    port: 808${SEQUENCE_NO}
+    eureka:
+      client:
+      instance:
+        instance-id: ${spring.application.name}-${SEQUENCE_NO}
+    ```    
