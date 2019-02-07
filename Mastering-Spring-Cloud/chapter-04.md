@@ -156,3 +156,53 @@ eureka:
       instance:
         instance-id: ${spring.application.name}-${SEQUENCE_NO}
     ```    
+## IP주소 우선하기
+- 모든 인스턴스는 호스트명으로 등록됨
+- 보통은 마이크로서비스의 경우 DNS가 없음
+    - 해결을 위한 대안
+        - 유레카의 등록 절차 컨피규레이션 설정에서 호스트명 대신 서비스의 IP주소를 사용
+        - `prefer-ip-address` 속성을 true로 설정
+- 레지스트리의 모든 서비스 인스턴스는 유레카 대시보드에 호스트명을 담은 instanceId를 사용
+- 링크를 클릭하면 IP 주소 기반으로 리디렉션됨
+    - 리본 클라이언트도 같은 원리를 따름
+- 서비스의 네트워크 위치를 결정하기 위한 방법으로 IP 주소 사용 시 문제가 발생
+    - 머신에 하나 이상의 네트워크 인터페이스가 있을 경우
+    - 올바른 인터페이스 선택을 위해 컨피규레이션 파일에 무시할 패턴의 목록을 정의
+    ```yaml
+    spring:
+      cloud:
+        inetutils:
+          preferred-networks: 
+            - 192.168
+          ignored-interfaces: 
+            - eth1*
+    ``` 
+## 응답 캐시
+- 유레카 서버는 기본적으로 응답을 캐싱
+- 캐시는 30초마다 무효화됨
+- `/eureka/apss` API로 확인 가능
+- 응답 캐시의 타임아웃 재정의
+    - `responseCacheUpdateIntervalsMs 속성`
+- 대시보드에 등록된 인스턴스 표시하는 부분은 캐시가 없음
+```yaml
+eureka:
+  server:
+    response-cache-update-interval-ms: 3000
+```
+- 클라이언트 측에서도 유레카 레지스트리를 캐싱함
+    - 서버에서 캐시 타임아웃을 변경해도 클라이언트에서 갱신되는 데 시간이 걸림
+    - 레지스트리는 30초마다 실행되는 백그라운드 태스크에 의해 비동기로 갱신
+        - `registry-fetch-interval-seconds` 속성
+    - 마지막으로 시도한 값에서 변경된 내용만 가져옴
+        - `disable-delta` 속성으로 비활성화 가능    
+- 유레카를 이용해 단위 테스트 개발 시 캐시 없이 즉시 응답을 받아야함
+```yaml
+eureka:
+  client:
+    registry-fetch-interval-seconds: 3
+    disable-delta: true
+```
+## 클라이언트와 서버 간의 보안 통신 사용하기
+- 보안 활성화 및 기본 자격 증명 설정
+
+- 디스커버리 클라이언트와 서버 간에 더 진보된 보안을 위해선 `DiscoveryClientOptionalArgs`를 맞춤형으로 구현해야함
