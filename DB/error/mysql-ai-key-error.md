@@ -17,7 +17,7 @@ MySQL에서 위 쿼리 처럼 AI(Auto Increment) Key를 설정할 때 해당 열
 아래 쿼리처럼 `primary key`로 지정해주면 문제가 해결됩니다.
 
 ```sql
-create table mrs_pt.pt_tt1
+create table test
 (
 	seq int(11) unsigned auto_increment primary key 
 );
