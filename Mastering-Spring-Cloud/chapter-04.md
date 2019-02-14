@@ -363,8 +363,40 @@ server:
 	- 목록의 첫 번째 서버로의 연결이 실패하면 두 번째 서버로 연결을 시도하는 식임
 -  VM인자에 -Dspring.profiles.active=zone[n]을 추가함. n은 인스턴스 번호
 - -Xmx192m 설정을 추천함
-- 
+- 스프링 클라우드 애플리케이션에 아무런 메모리 제한을 제공하지 않으면 시작할 때 힙(heap)으로 약 350MB를 사용하고 총 600MB 정도의 메모리를 사용함
+```yaml
+spring:  
+  profiles: zone1  
+eureka:  
+  client:  
+    service-url:  
+      defaultZone:  
+        http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/  
+server:  
+  port: ${PORT:8081}  
+---  
+spring:  
+  profiles: zone2  
+eureka:  
+  client:  
+    service-url:  
+      defaultZone:  
+        http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/  
+server:  
+  port: ${PORT:8082}  
+---  
+spring:  
+  profiles: zone3  
+eureka:  
+  client:  
+    service-url:  
+      defaultZone:  
+        http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/  
+server:  
+  port: ${PORT:8083}
+```
+- 유레카 대시보드로 client-service 애플리케이션
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTQ3NzA0ODAsMTA1MzkyMjAzOSwtMT
-Y5NDkzNjI5LDIxNDE3NTUxNzYsLTUyOTMyODQwMV19
+eyJoaXN0b3J5IjpbMTc5NDczNTY1OCwxMDUzOTIyMDM5LC0xNj
+k0OTM2MjksMjE0MTc1NTE3NiwtNTI5MzI4NDAxXX0=
 -->
