@@ -275,6 +275,8 @@ MjZdfQ==
 	    health-check-url: https://${eureka.hostname}:${server.port}/health  
 	    home-page-url: https://${eureka.hostname}:${server.port}/
 	```
+## 유레카 API
+- 스프링 클라우드 넷플릭스는 유레카의 HTTP API를 다룰 필ㅇ	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyOTMyODQwMV19
+eyJoaXN0b3J5IjpbLTMwNTQzMTM1MiwtNTI5MzI4NDAxXX0=
 -->
