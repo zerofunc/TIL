@@ -282,6 +282,21 @@ MjZdfQ==
 	- 다른 프로그래밍 언어로 어플리케이션 작성
 	- 지속 배포 프로세스에서 등록된 서비스 목록 정보가 필요할 때
 	
+| HTTP 종단점                                          | 설명                                                       |
+|------------------------------------------------------|------------------------------------------------------------|
+| POST /eureka/apps/appID                              | 레지스트리에 새로운 서비스 인스턴스를 등록                 |
+| DELETE /eureka/apps/appID/instanceID                 | 레지스트리에서 서비스 인스턴스를 제거                      |
+| PUT /eureka/apps/appID/instanceID                    | 서버에 하트비트를 전송                                     |
+| GET /eureka/apps                                     | 등록된 모든 서비스 인스턴스의 상세 정보를 조회             |
+| GET /eureka/apps/appID                               | 특정 서비스의 모든 인스턴스의 상세 정보를 조회             |
+| GET /eureka/apps/appID/instanceID                    | 특정 서비스의 특정 인스턴스의 상세 정보를 조회             |
+| PUT /eureka/apps/appID/instanceID/metadata?key=value | 메타 정보 입력값을 갱신                                    |
+| GET /eureka/instances/instanceID                     | 특정 ID를 사용하는 모든 등록된 인스턴스의 상세 정보를 조회 |
+| PUT /eureka/apps/appID/instanceID/status?value=DOWN  | 인스턴스의 상태를 갱신                                     |	
+## 복제와 고가요성
+- 운영 모드에서는 디스커버리 서버의 장애나 네트워크 문제에 대비해 적어도 두 개의 디스커버리 서버를 구성해야 함
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0MTc1NTE3NiwtNTI5MzI4NDAxXX0=
+eyJoaXN0b3J5IjpbMTU1Nzk2NDE1MywyMTQxNzU1MTc2LC01Mj
+kzMjg0MDFdfQ==
 -->
