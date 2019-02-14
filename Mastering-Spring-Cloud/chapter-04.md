@@ -431,9 +431,10 @@ server:
 	```
 - 주울 프록시를 사용하는 애플리케이션은 java -jar 명령을 사용해 실행함
 - https://localhost:8765/api/client/ping 이라고 주소를 입력함
-- 연속으로 수차례 요청을 보내면 게이트웨이가 존재하는 client-service 인스턴스 간에 1:1:1	
+- 연속으로 수차례 요청을 보내면 게이트웨이가 존재하는 client-service 인스턴스 간에 1:1:1의 비율로 부하가 분삼됨
+- 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDAwMTA0NDcsMjk1MjIwNzQzLC0zNT
-A2NTkyODcsMTA1MzkyMjAzOSwtMTY5NDkzNjI5LDIxNDE3NTUx
-NzYsLTUyOTMyODQwMV19
+eyJoaXN0b3J5IjpbMTQ4OTU2MDI2MiwyOTUyMjA3NDMsLTM1MD
+Y1OTI4NywxMDUzOTIyMDM5LC0xNjk0OTM2MjksMjE0MTc1NTE3
+NiwtNTI5MzI4NDAxXX0=
 -->
