@@ -298,8 +298,12 @@ MjZdfQ==
 - 유레카는 리더쉽 선출이나 클러스터에 자동 참여와 같은 표준 클러스터링 메커니즘 제공 X
 - 동료 간(peer-to-peer) 복제 모델에 기반함
 	- 모든 서버가 현재 서버 노드에 구성된 모든 동료에게 데이터를 복제하고 하트비트를 보낸다는 뜻
- - 장점 : 데이터를 저장한다는 목적에는 간단함녀
+   - 장점:	데이터를 저장한다는 목적에는 간단하면서 효과적
+   - 단점:  확장성. 모든 노드가 서버에 저장하는 모든 부하를 견뎌야함
+   
+## 예제 솔루션의 아키텍쳐
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDcwMTEwNjMsMjE0MTc1NTE3NiwtNT
-I5MzI4NDAxXX0=
+eyJoaXN0b3J5IjpbNjYyMjY4ODQyLDIxNDE3NTUxNzYsLTUyOT
+MyODQwMV19
 -->
