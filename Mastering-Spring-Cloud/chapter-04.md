@@ -255,7 +255,7 @@ MjZdfQ==
     ```
         keytool -genkey -alias client -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
     ```
-1. keystore 파일 keystore.p12를 애플리케이션 `src/main/resources`폴더에 복사하고 application.yml 파일의 컨피규레이션 속성으로 HTTPS를 활성화함
+2. keystore 파일 keystore.p12를 애플리케이션 `src/main/resources`폴더에 복사하고 application.yml 파일의 컨피규레이션 속성으로 HTTPS를 활성화함
 	```yaml
 	server:  
 	  port: ${PORT:8081}  
@@ -266,6 +266,15 @@ MjZdfQ==
 	    key-alias: client
 	```
 3. 애플리케이션을 시작 후 안전한 https://localhost:8761/info 접근 할 수 있음. 유레카 클라이언트 인스턴스의 컨피규레이션 변경	 
+	```yaml
+	eureka:  
+	  instance:  
+	    non-secure-port-enabled: true  
+	    secure-port-enabled: true  
+	    status-page-url: https://${eureka.hostname}:${server.port}/info  
+	    health-check-url: https://${eureka.hostname}:${server.port}/health  
+	    home-page-url: https://${eureka.hostname}:${server.port}/
+	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczODExMzYyMV19
+eyJoaXN0b3J5IjpbLTUyOTMyODQwMV19
 -->
