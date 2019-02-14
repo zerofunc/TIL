@@ -399,11 +399,22 @@ server:
 	- 이번 예제는 디스커버리 서비스의 동료 간 복제 모델을 확인하는 것이 목적임
 - 클라이언트 애플리케이션은 선택된 프로파일을 출력하는 REST 종단점을 노출함
 - 프로파일 이름은 애플리케이션 인스턴스가 가리키는 디스커버리 서비스의 이름임
-- 아래 콛는 현재 존의 이름을 출력하는 간단한 예제
+- 아래 코드는 현재 존을 출력하는 예제
 	```java
-	
+	@RestController  
+	public class ClientController {  
+	    @Value("${spring.profiles}")  
+	    private String zone;  
+	    @GetMapping("/ping")  
+	    public String ping() {  
+	        return "I'm in zone " + zone;  
+	    }  
+	}
 	``` 
+### API 게이트웨이 구현
+- 주울과 넷플릭스의 API 게이트웨이, 라우터에서 제공하는 기능에 대해서
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MDY1OTI4NywxMDUzOTIyMDM5LC0xNj
-k0OTM2MjksMjE0MTc1NTE3NiwtNTI5MzI4NDAxXX0=
+eyJoaXN0b3J5IjpbMTQ4MDk3NTk3NywtMzUwNjU5Mjg3LDEwNT
+M5MjIwMzksLTE2OTQ5MzYyOSwyMTQxNzU1MTc2LC01MjkzMjg0
+MDFdfQ==
 -->
