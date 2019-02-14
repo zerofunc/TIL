@@ -223,8 +223,8 @@ eureka:
 	     defaultZone: http://admin:admin123@localhost:8761/eureka/
 	```
 - 디스커버리 클라이언트와 서버 간에 더 진보된 보안을 위해선 `DiscoveryClientOptionalArgs`를 맞춤형으로 구현해야함
--  12
+-  12장 **API 보안 강화하기**에서 한 가지 예를 다룰 것임. 특히 스프링 클라우드 애플리케이션의 보안에 종속적인 사례를 논의할 것임
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NzkwNTYyNiw2MTU3NjQ0MDEsMTQ2Mj
+eyJoaXN0b3J5IjpbMTgwNDgzNTk4OSw2MTU3NjQ0MDEsMTQ2Mj
 M3ODIxMSwxNzIzMDcxMDMwLC0zODI2NTYzMjZdfQ==
 -->
