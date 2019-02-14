@@ -310,8 +310,53 @@ MjZdfQ==
 		- 자동 확장된 서버
 		- 풍부한 정보의 대시보드
 -  다음 다이어그램에 표시한 예제 시스템의 아키텍쳐를 살펴보자. 하나의 서비스에 대해 각기 다른 존(zone)에 등록된 애플리케이션 인스턴스 간의 부하 분산 테스틀 하는 데 도움 될 것임
-	  
+## 예제 애플리케이션 개발하기
+- application.yml 파일에 디스커버리 서비스의 각 인스턴스 별로 세 개의 다른 프로파일을 정의함
+- -Dspring.profiles.active=peer[n] VM 인자에 프로파일을 지정해 활성화 해야함. n은 인스턴스 번호
+```yaml
+spring:  
+  profiles: peer1  
+eureka:  
+  instance:  
+    hostname: peer1  
+    metadata-map:   
+      zone: zone1  
+  client:  
+    service-url:   
+      defaultZone:  
+        http://localhost:8762/eureka/,http://localhost:8763/eureka/  
+server:  
+  port: ${PORT:8761}  
+---  
+spring:  
+  profiles: peer2  
+eureka:  
+  instance:  
+    hostname: peer2  
+    metadata-map:  
+      zone: zone2  
+  client:  
+    service-url:  
+      defaultZone:  
+        http://localhost:8761/eureka/,http://localhost:8763/eureka/  
+server:  
+  port: ${PORT:8762}  
+---  
+spring:  
+  profiles: peer3  
+eureka:  
+  instance:  
+    hostname: peer3  
+    metadata-map:  
+      zone: zone3  
+  client:  
+    service-url:  
+      defaultZone:  
+        http://localhost:8761/eureka/,http://localhost:8762/eureka/  
+server:  
+  port: ${PORT:8763}
+```	  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTQ5MzYyOSwyMTQxNzU1MTc2LC01Mj
-kzMjg0MDFdfQ==
+eyJoaXN0b3J5IjpbNzIzMDAyMTIxLC0xNjk0OTM2MjksMjE0MT
+c1NTE3NiwtNTI5MzI4NDAxXX0=
 -->
