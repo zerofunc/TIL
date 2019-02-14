@@ -265,7 +265,7 @@ MjZdfQ==
 	    key-store-type: PKCS12  
 	    key-alias: client
 	```
-3. 애플리케이션을 시작 후 안전한 https://localhost:8761/info 접근 할 수 있음. 유레카 클	 
+3. 애플리케이션을 시작 후 안전한 https://localhost:8761/info 접근 할 수 있음. 유레카 클라이언트 인스턴스의 컨피규레이션 변경	 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzOTAxODExMF19
+eyJoaXN0b3J5IjpbLTczODExMzYyMV19
 -->
