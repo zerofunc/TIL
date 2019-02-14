@@ -303,11 +303,15 @@ MjZdfQ==
    
 ## 예제 솔루션의 아키텍쳐
 - 다음 버전의 유레카 서버
--  시작하게 된 주요 동기
-	- 복제 메커니즘
-- 흥미로운 기능
-	-  
+	- 시작하게 된 주요 동기
+		- 복제 메커니즘
+	- 흥미로운 기능
+		- 등록된 목록의 모든 변경을 서버에서 클라이언트로 보내는 푸시 모델
+		- 자동 확장된 서버
+		- 풍부한 정보의 대시보드
+-  
+	  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NDQxODUyMiwyMTQxNzU1MTc2LC01Mj
+eyJoaXN0b3J5IjpbLTEwODU2NTQ2MSwyMTQxNzU1MTc2LC01Mj
 kzMjg0MDFdfQ==
 -->
