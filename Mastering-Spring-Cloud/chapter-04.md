@@ -257,6 +257,9 @@ MjZdfQ==
     ```
 1. keystore 파일 keystore.p12를 애플리케이션 `src/main/resources`폴더에 복사하고 application.yml 파일의 컨피규레이션 속성으로 HTTPS를 활성화함
 ```yaml
-
+-
 ```
  
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTU0NjE2NjY1XX0=
+-->
