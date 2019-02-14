@@ -209,18 +209,16 @@ eureka:
 	```
 - application.yml 컨피규레이션 설정을 변경해 보안을 활성화하고 기본 자격 증명을 설정함
 	```yaml
-	spring:
-		security:
-			user:
-				name: admin
-				password : admin123	
+	spring:  
+	 security: 
+	   user: 
+	    name: admin  
+	    password: admin123
 	```
-
-- 보안 활성화 및 기본 자격 증명 설정
-
+- HTTP 기본 인증을 활성화하는 클라이언트
 - 디스커버리 클라이언트와 서버 간에 더 진보된 보안을 위해선 `DiscoveryClientOptionalArgs`를 맞춤형으로 구현해야함
 -  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MjM3ODIxMSwxNzIzMDcxMDMwLC0zOD
-I2NTYzMjZdfQ==
+eyJoaXN0b3J5IjpbLTExMzcxMDMwNDksMTQ2MjM3ODIxMSwxNz
+IzMDcxMDMwLC0zODI2NTYzMjZdfQ==
 -->
