@@ -295,8 +295,11 @@ MjZdfQ==
 | PUT /eureka/apps/appID/instanceID/status?value=DOWN  | 인스턴스의 상태를 갱신                                     |	
 ## 복제와 고가요성
 - 운영 모드에서는 디스커버리 서버의 장애나 네트워크 문제에 대비해 적어도 두 개의 디스커버리 서버를 구성해야 함
-- 
+- 유레카는 리더쉽 선출이나 클러스터에 자동 참여와 같은 표준 클러스터링 메커니즘 제공 X
+- 동료 간(peer-to-peer) 복제 모델에 기반함
+	- 모든 서버가 현재 서버 노드에 구성된 모든 동료에게 데이터를 복제하고 하트비트를 보낸다는 뜻
+ - 장점 : 데이터를 저장한다는 목적에는 간단함녀
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1Nzk2NDE1MywyMTQxNzU1MTc2LC01Mj
-kzMjg0MDFdfQ==
+eyJoaXN0b3J5IjpbLTE3MDcwMTEwNjMsMjE0MTc1NTE3NiwtNT
+I5MzI4NDAxXX0=
 -->
