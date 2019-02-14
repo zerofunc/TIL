@@ -203,11 +203,15 @@ eureka:
     disable-delta: true
 ```
 ## 클라이언트와 서버 간의 보안 통신 사용하기
-- 
+- 프로젝트 의존성에 시큐리티 스타터 추가
+	```groovy
+	compile 'org.springframework.boot:spring-boot-starter-security'
+	```
+	
 - 보안 활성화 및 기본 자격 증명 설정
 
 - 디스커버리 클라이언트와 서버 간에 더 진보된 보안을 위해선 `DiscoveryClientOptionalArgs`를 맞춤형으로 구현해야함
 -  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0MjgwMDUzLC0zODI2NTYzMjZdfQ==
+eyJoaXN0b3J5IjpbMTcyMzA3MTAzMCwtMzgyNjU2MzI2XX0=
 -->
