@@ -241,8 +241,22 @@ eureka:
 	```
 - 디스커버리 클라이언트와 서버 간에 더 진보된 보안을 위해선 `DiscoveryClientOptionalArgs`를 맞춤형으로 구현해야함
 -  12장 **API 보안 강화하기**에서 한 가지 예를 다룰 것임. 특히 스프링 클라우드 애플리케이션의 보안에 종속적인 사례를 논의할 것임.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNjE5OTUzNCwtMTk3OTIyMTI4MSwxOD
-A0ODM1OTg5LDYxNTc2NDQwMSwxNDYyMzc4MjExLDE3MjMwNzEw
-MzAsLTM4MjY1NjMyNl19
+eyJoaXN0b3J5IjpbLTE5NzkyMjEyODEsMTgwNDgzNTk4OSw2MT
+U3NjQ0MDEsMTQ2MjM3ODIxMSwxNzIzMDcxMDMwLC0zODI2NTYz
+MjZdfQ==
 -->
+
+## 안전한 서비스 등록하기
+서버 측의 보안을 강화하는 것과 보안 애플리케이션을 등록하는 것은 다르다
+
+1. 스프링 부트 애플리케이션에 SSl을 활성화하려면 사설 인증서를 생성해야함. JRE 폴더 아래 bin/keytool 을 사용
+    ```
+        keytool -genkey -alias client -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+    ```
+1. keystore 파일 keystore.p12를 애플리케이션 `src/main/resources`폴더에 복사하고 application.yml 파일의 컨피규레이션 속성으로 HTTPS를 활성화함
+```yaml
+
+```
+ 
