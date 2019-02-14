@@ -416,9 +416,21 @@ server:
 - 주울을 통해 예제 솔루션을 테스트하는데 도움이 됨
 	- 디스커버리 서버에 등록된 서비스 목록을 얻어와 클라이언트 애플리케이션의 모든 인스턴스 간에 부하 분산을 하기 때문
 	- /api/client/** 경로로 유입되는 모든 요청은 client-server 서비스로 라우팅됨
-	``
+	```yaml
+	zuul:
+	  prefix: /api
+	  routes:
+	    client:
+	      path: /client/**
+	      serviceId: client-service
+	eureka:
+	  client:
+	    serviceUrl:
+	      defaultZone: http://localhost:8763/eureka/
+	    register-with-eureka: false        
+	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5MzA0Nzc3LC0zNTA2NTkyODcsMTA1Mz
+eyJoaXN0b3J5IjpbMjk1MjIwNzQzLC0zNTA2NTkyODcsMTA1Mz
 kyMjAzOSwtMTY5NDkzNjI5LDIxNDE3NTUxNzYsLTUyOTMyODQw
 MV19
 -->
