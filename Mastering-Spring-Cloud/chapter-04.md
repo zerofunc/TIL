@@ -241,9 +241,8 @@ eureka:
 	```
 - 디스커버리 클라이언트와 서버 간에 더 진보된 보안을 위해선 `DiscoveryClientOptionalArgs`를 맞춤형으로 구현해야함
 -  12장 **API 보안 강화하기**에서 한 가지 예를 다룰 것임. 특히 스프링 클라우드 애플리케이션의 보안에 종속적인 사례를 논의할 것임.
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzkyMjEyODEsMTgwNDgzNTk4OSw2MT
-U3NjQ0MDEsMTQ2MjM3ODIxMSwxNzIzMDcxMDMwLC0zODI2NTYz
-MjZdfQ==
+eyJoaXN0b3J5IjpbMTYxNjE5OTUzNCwtMTk3OTIyMTI4MSwxOD
+A0ODM1OTg5LDYxNTc2NDQwMSwxNDYyMzc4MjExLDE3MjMwNzEw
+MzAsLTM4MjY1NjMyNl19
 -->
