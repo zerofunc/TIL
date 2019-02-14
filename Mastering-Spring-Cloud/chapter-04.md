@@ -395,8 +395,10 @@ eureka:
 server:  
   port: ${PORT:8083}
 ```
-- 유레카 대시보드로 client-service 애플리케이션
+- 유레카 대시보드로 client-service 인스턴스가 세 개 등록된 걸 확인 가능. 어떤 디스커버리 서비스 인스턴스의 대시보드를 보더라도 똑같음
+	- 이번 예제는 디스커버리 서비스의 동료 간 복제 모델을 확인하는 것이 목적임
+ 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NDczNTY1OCwxMDUzOTIyMDM5LC0xNj
+eyJoaXN0b3J5IjpbMjA2NDg1MDc0MSwxMDUzOTIyMDM5LC0xNj
 k0OTM2MjksMjE0MTc1NTE3NiwtNTI5MzI4NDAxXX0=
 -->
