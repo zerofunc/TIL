@@ -302,8 +302,12 @@ MjZdfQ==
    - 단점:  확장성. 모든 노드가 서버에 저장하는 모든 부하를 견뎌야함
    
 ## 예제 솔루션의 아키텍쳐
-
+- 다음 버전의 유레카 서버
+-  시작하게 된 주요 동기
+	- 복제 메커니즘
+- 흥미로운 기능
+	-  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYyMjY4ODQyLDIxNDE3NTUxNzYsLTUyOT
-MyODQwMV19
+eyJoaXN0b3J5IjpbLTQ5NDQxODUyMiwyMTQxNzU1MTc2LC01Mj
+kzMjg0MDFdfQ==
 -->
