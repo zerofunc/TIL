@@ -207,13 +207,30 @@ eureka:
 	```groovy
 	compile 'org.springframework.boot:spring-boot-starter-security'
 	```
-- application.yml 컨피규레이션 설정을 변경해 보안을 활성화하고 기본 자격 증명을 설정함
-	```yaml
-	spring:  
-	 security: 
-	   user: 
-	    name: admin  
-	    password: admin123
+- eureka server에서 Java Config로 보안을 활성화하고 기본 자격 증명을 설정함
+	```java
+	@Configuration
+    public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    	
+    	@Override
+    	public void configure(AuthenticationManagerBuilder auth) throws Exception {
+    		auth.inMemoryAuthentication()
+    				.passwordEncoder(NoOpPasswordEncoder.getInstance())
+    				.withUser("admin").password("admin123")
+    				.authorities("ADMIN");
+    	}
+    	
+    	@Override
+    	protected void configure(HttpSecurity http) throws Exception {
+    		http
+    				.csrf()
+    				.disable()
+    				.authorizeRequests()
+    				.anyRequest().authenticated()
+    				.and()
+    				.httpBasic();
+    	}
+    }
 	```
 - HTTP 기본 인증을 활성화하는 클라이언트 측 컨피규레이션
 	```yaml
