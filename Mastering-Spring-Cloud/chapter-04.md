@@ -356,8 +356,11 @@ eureka:
 server:  
   port: ${PORT:8763}
 ```	  
+- 각기 다른 프로파일을 사용하는 세 개의 유레카 인스턴스를 실행해 로컬 디스커버리 클러스터를 생성함. 실행 후 대시보드에 등록된 인스턴스를 보면 세 개의 인스턴스가 보임
 
+### 클라이언트 애플리케이션 실행
+- defaultZone 필드에 제공된 주소의 순서는 다른 디스커비
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MzkyMjAzOSwtMTY5NDkzNjI5LDIxND
-E3NTUxNzYsLTUyOTMyODQwMV19
+eyJoaXN0b3J5IjpbLTE1NjIxNjE5ODMsMTA1MzkyMjAzOSwtMT
+Y5NDkzNjI5LDIxNDE3NTUxNzYsLTUyOTMyODQwMV19
 -->
