@@ -309,9 +309,9 @@ MjZdfQ==
 		- 등록된 목록의 모든 변경을 서버에서 클라이언트로 보내는 푸시 모델
 		- 자동 확장된 서버
 		- 풍부한 정보의 대시보드
--  
+-  다음 다이어그램에 표시한 예제 시스템의 아키텍쳐를 살펴보자. 하나의 서비스에 대해 각기 다른 존(zone)에 등록된 애플리케이션 인스턴스 간의 부하 분산 테스틀 하는 데 도움 될 것임
 	  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODU2NTQ2MSwyMTQxNzU1MTc2LC01Mj
+eyJoaXN0b3J5IjpbLTE2OTQ5MzYyOSwyMTQxNzU1MTc2LC01Mj
 kzMjg0MDFdfQ==
 -->
