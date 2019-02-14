@@ -207,11 +207,13 @@ eureka:
 	```groovy
 	compile 'org.springframework.boot:spring-boot-starter-security'
 	```
-	
+- application.yml 컨피규레이션 설정을 변경해 보안을 활성화하고 기본 자격 증명을 설정함
+		```yaml
 - 보안 활성화 및 기본 자격 증명 설정
 
 - 디스커버리 클라이언트와 서버 간에 더 진보된 보안을 위해선 `DiscoveryClientOptionalArgs`를 맞춤형으로 구현해야함
 -  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMzA3MTAzMCwtMzgyNjU2MzI2XX0=
+eyJoaXN0b3J5IjpbMTM1MzAwMTQ2NywxNzIzMDcxMDMwLC0zOD
+I2NTYzMjZdfQ==
 -->
