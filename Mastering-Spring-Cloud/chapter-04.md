@@ -256,10 +256,16 @@ MjZdfQ==
         keytool -genkey -alias client -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
     ```
 1. keystore 파일 keystore.p12를 애플리케이션 `src/main/resources`폴더에 복사하고 application.yml 파일의 컨피규레이션 속성으로 HTTPS를 활성화함
-```yaml
--
-```
- 
+	```yaml
+	server:  
+	  port: ${PORT:8081}  
+	  ssl:  
+	    key-store: classpath:keystore.p12  
+	    key-store-password: 123456  
+	    key-store-type: PKCS12  
+	    key-alias: client
+	```
+3. 애플리케이션을 시작 후 안전한 https://localhost:8761/info 접근 할 수 있음. 유레카 클	 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NjE2NjY1XX0=
+eyJoaXN0b3J5IjpbMTUzOTAxODExMF19
 -->
