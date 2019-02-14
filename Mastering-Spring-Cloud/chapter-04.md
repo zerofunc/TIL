@@ -412,9 +412,13 @@ server:
 	}
 	``` 
 ### API 게이트웨이 구현
-- 주울과 넷플릭스의 API 게이트웨이, 라우터에서 제공하는 기능에 대해서
+- 주울과 넷플릭스의 API 게이트웨이, 라우터에서 제공하는 기능에 대해선 다음 장에서 자세히 다룰 것임
+- 주울을 통해 예제 솔루션을 테스트하는데 도움이 됨
+	- 디스커버리 서버에 등록된 서비스 목록을 얻어와 클라이언트 애플리케이션의 모든 인스턴스 간에 부하 분산을 하기 때문
+	- /api/client/** 경로로 유입되는 모든 요청은 client-server 서비스로 라우팅됨
+	``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MDk3NTk3NywtMzUwNjU5Mjg3LDEwNT
-M5MjIwMzksLTE2OTQ5MzYyOSwyMTQxNzU1MTc2LC01MjkzMjg0
-MDFdfQ==
+eyJoaXN0b3J5IjpbMTM5MzA0Nzc3LC0zNTA2NTkyODcsMTA1Mz
+kyMjAzOSwtMTY5NDkzNjI5LDIxNDE3NTUxNzYsLTUyOTMyODQw
+MV19
 -->
