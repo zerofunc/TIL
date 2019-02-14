@@ -359,8 +359,12 @@ server:
 - 각기 다른 프로파일을 사용하는 세 개의 유레카 인스턴스를 실행해 로컬 디스커버리 클러스터를 생성함. 실행 후 대시보드에 등록된 인스턴스를 보면 세 개의 인스턴스가 보임
 
 ### 클라이언트 애플리케이션 실행
-- defaultZone 필드에 제공된 주소의 순서는 다른 디스커비
+- defaultZone 필드에 제공된 주소의 순서는 다른 디스커버리 서비스에 연결을 시도하는 순서를 결정함
+	- 목록의 첫 번째 서버로의 연결이 실패하면 두 번째 서버로 연결을 시도하는 식임
+-  VM인자에 -Dspring.profiles.active=zone[n]을 추가함. n은 인스턴스 번호
+- -Xmx192m 설정을 추천함
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjIxNjE5ODMsMTA1MzkyMjAzOSwtMT
+eyJoaXN0b3J5IjpbLTE5MTQ3NzA0ODAsMTA1MzkyMjAzOSwtMT
 Y5NDkzNjI5LDIxNDE3NTUxNzYsLTUyOTMyODQwMV19
 -->
