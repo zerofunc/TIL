@@ -397,8 +397,13 @@ server:
 ```
 - 유레카 대시보드로 client-service 인스턴스가 세 개 등록된 걸 확인 가능. 어떤 디스커버리 서비스 인스턴스의 대시보드를 보더라도 똑같음
 	- 이번 예제는 디스커버리 서비스의 동료 간 복제 모델을 확인하는 것이 목적임
- 
+- 클라이언트 애플리케이션은 선택된 프로파일을 출력하는 REST 종단점을 노출함
+- 프로파일 이름은 애플리케이션 인스턴스가 가리키는 디스커버리 서비스의 이름임
+- 아래 콛는 현재 존의 이름을 출력하는 간단한 예제
+	```java
+	
+	``` 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2NDg1MDc0MSwxMDUzOTIyMDM5LC0xNj
+eyJoaXN0b3J5IjpbLTM1MDY1OTI4NywxMDUzOTIyMDM5LC0xNj
 k0OTM2MjksMjE0MTc1NTE3NiwtNTI5MzI4NDAxXX0=
 -->
