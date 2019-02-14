@@ -215,10 +215,13 @@ eureka:
 	    name: admin  
 	    password: admin123
 	```
-- HTTP 기본 인증을 활성화하는 클라이언트
+- HTTP 기본 인증을 활성화하는 클라이언트 측 컨피규레이션
+```yaml
+
+```
 - 디스커버리 클라이언트와 서버 간에 더 진보된 보안을 위해선 `DiscoveryClientOptionalArgs`를 맞춤형으로 구현해야함
 -  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzcxMDMwNDksMTQ2MjM3ODIxMSwxNz
-IzMDcxMDMwLC0zODI2NTYzMjZdfQ==
+eyJoaXN0b3J5IjpbNjE1NzY0NDAxLDE0NjIzNzgyMTEsMTcyMz
+A3MTAzMCwtMzgyNjU2MzI2XX0=
 -->
