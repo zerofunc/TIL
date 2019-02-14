@@ -276,7 +276,12 @@ MjZdfQ==
 	    home-page-url: https://${eureka.hostname}:${server.port}/
 	```
 ## 유레카 API
-- 스프링 클라우드 넷플릭스는 유레카의 HTTP API를 다룰 필ㅇ	
+- 스프링 클라우드 넷플릭스는 유레카의 HTTP API를 다룰 필요 없게 자바로 작성된 클라이언트를 제공함
+- 다른 프레임워크 사용 시 넷플릭스 OOS가 제공하는 바닐라(vanilla) 유레카 클라이언트를 의존성에 포함할 수 있음
+- 유레카 API를 직접 호출해야 하는 경우
+	- 다른 프로그래밍 언어로 어플리케이션 작성
+	- 지속 배포 프로세스에서 등록된 서비스 목록 정보가 필요할 때
+	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNTQzMTM1MiwtNTI5MzI4NDAxXX0=
+eyJoaXN0b3J5IjpbMjE0MTc1NTE3NiwtNTI5MzI4NDAxXX0=
 -->
